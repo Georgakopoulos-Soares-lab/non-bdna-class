@@ -26,5 +26,5 @@ Depending on your OS, click one of the following guides:
 ## NON B-DNA Utilities
 
 <a href="nonbdna/README.md">
-    <img src="nonbdna/image.jpg" alt="NON B-DNA" width="100%">
+    <img src="nonbdna/image.jpg" alt="NON B-DNA" width="40%">
 </a>
