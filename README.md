@@ -12,6 +12,11 @@ Please for any question contact Nikol in the following email: `nmc6088@psu.edu`.
 
 # Installation Guide
 
-[![Windows Installation](windows/image.png)](windows/README.md)
-
-[![Mac Installation](mac/image.png)](mac/README.md)
+<p align="center">
+  <a href="windows/README.md">
+    <img src="windows/image.svg" alt="Windows Installation" width="45%">
+  </a>
+  <a href="mac/README.md">
+    <img src="mac/image.png" alt="Mac Installation" width="45%">
+  </a>
+</p>
