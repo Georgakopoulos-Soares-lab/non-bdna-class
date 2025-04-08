@@ -8,25 +8,30 @@ Please for any question contact Nikol in the following email: `nmc6088@psu.edu`.
 
 # WSL Installation
 
+The Windows Subsystem for Linux (WSL) allows us to install a Linux distribution 
+(such as Ubuntu, Kali, etc.) and use Linux applications and utilities, Bash command line tools 
+directly from Windows.
+
 First, let's check your windows version.
 
-Follow the instructions below:
+Follow the instructions below to determine your windows version. Why is this important? 
+Many important features come out of the box with Windows 11, whereas with Windows 10 we need to struggle more.
 
 - Step 1: Press `Windows + R`
 - Step 2: `winver`
 - Step 3: `Press Enter`
 
-If you see Windows 11, please proceed below otherwise contact us.
+If you see Windows 10, please contact us.
 
 Before we proceed with WSL installation, we need to make sure virtualization is 
 enabled on your computer.
 
 - Step 1: `Windows + R`
-- Enter: `taskmgr`
-- Go to the Performance tab.
-- Click on the CPU tab.
+- Step 2: Enter: `taskmgr`
+- Step 3: Go to the Performance tab.
+- Step 4: Click on the CPU tab.
 
-Notice below there's a "Virtualization" field. If it's enable you can proceed below.
+Notice below there's a "Virtualization" field. If it's enabled you can proceed below.
 
 ## WSL Installation
 
@@ -38,7 +43,6 @@ Follow the instructions below:
 - Step 2: Open powershell, by typing `ps` and click `CTRL + SHIFT + ENTER` to run as administrator.
 
 The powershell command line will pop up (probably a blue window).
-
 We will install Ubuntu distribution as follows:
 
 - Step 1: Enter `wsl --install`
@@ -70,11 +74,20 @@ Let's set your windows terminal as the default:
 - Step 5: SAVE!
 
 
+## Ubuntu Profile
+
+After we have succesfully installed WSL and Windows Terminal, the first time we open WSL, we will have to create a useraccount.
+
+
+
+
 ## Locale
 
-Set the locale to english
+Locales customize programs to your language and country. The basic functionality 
+is provided by the locales package, which is installed by default with a given 
+distribution (source: [Locale](https://help.ubuntu.com/community/Locale)).
 
-Type:
+Set the locale to english. Type:
 
 ```
 locale
@@ -93,12 +106,7 @@ We need to install some basic utilities to facilitate our workflow.
 Let's run
 
 ```
-sudo apt update
-```
-
-and 
-
-```
+sudo apt update 
 sudo apt install -y tree wget curl git imagemagick jq unzip vim 
 ```
 
@@ -146,6 +154,23 @@ gh --version
 
 if we see an error, we need to stop before proceeding. If the version of the gh 
 appears correctly we can proceed!
+
+
+As a next step, we need to setup github CLI. Type:
+
+```
+gh auth login -s 'user:email' -w
+```
+
+Use `SSH` protocol.
+
+Then copy-paste the code to authenticate via GitHub Web-Page.
+
+Finally, let's check if installation was succesful:
+
+```
+gh auth status
+```
 
 ## Micromamba Installation
 
@@ -218,41 +243,3 @@ You need to create a github profile in the following website:
 
 After your github profile has been created, we need to create an SSH key to 
 be able to access it from the command line
-
-## NON B-DNA Detection tools
-
-Let's clone some packages important for non b-dna detection:
-
-```
-export CLASS=nonbdna_class
-mkdir -p && cd $CLASS
-git clone git@github.com:abcsFrederick/non-B_gfa.git
-```
-
-After we have cloned the repository we need to compile it using:
-
-```
-make
-```
-
-Finally, we will create an alias, so we can access the tool from anywhere on our
-computer:
-
-```
-echo "alias gfa=$(readlink -f ./gfa)" >> ~/.bashrc
-chmod +x ./gfa
-```
-
-Let's restart the shell:
-
-```
-source ~/.bashrc
-```
-
-Time to test it! Type:
-
-```
-cd && ./gfa
-```
-
-You are ready to detect non b-dna!
