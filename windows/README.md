@@ -127,7 +127,7 @@ Open Microsoft store from your `Search` bar, search for `Ubuntu` and click on `G
 
 It should look like this:
 
-![ubuntu](ubuntu-store.png)
+![microsoft-store](ubuntu.png)
 
 The first time the Linux distribution is launched a new console window will pop-up and you will be asked to wait.
 
