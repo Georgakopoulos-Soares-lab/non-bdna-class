@@ -155,6 +155,8 @@ installation has been succesful.
 
 </details>
 
+### Validate WSL Installation
+
 Check the version of our WSL:
 
 ```
@@ -163,7 +165,7 @@ wsl -l -v
 
 You should see something like:
 
-![running-instance](wsl_running_distance_marked.PNG)
+![running-instance](wsl_running_instance_marked.PNG)
 
 If the version is not WSL 2, we need to set it as follows:
 
