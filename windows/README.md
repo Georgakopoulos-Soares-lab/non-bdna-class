@@ -23,6 +23,22 @@ Many important features come out of the box with Windows 11, whereas with Window
 
 If you see Windows 10, please contact us.
 
+## System Information
+
+To identify System Architecture proceed as follows:
+
+- Step 1: Press `Win + R`
+- Step 2: Type `msinfo32` and press `ENTER`
+- Step 3: Open `Settings > System > About` and check your system information.
+
+It should look as follows:
+
+![System Information](system_information.png)
+
+We can see that our system is 64-bit with x64-based Intel processor.
+
+## Virtualization
+
 Before we proceed with WSL installation, we need to make sure virtualization is 
 enabled on your computer.
 
@@ -33,6 +49,29 @@ enabled on your computer.
 
 Notice below there's a "Virtualization" field. If it's enabled you can proceed below.
 
+<details>
+    <summary> Click Me: Enable Virtualization </summary>
+</details>
+
+As a next step, we will make sure virtualization features are enabled. 
+
+- Step 1: `Windows + R`
+- Step 2: Enter: `optionalfeatures`
+- Step 3: Tick the following fields:
+    - Virtual Machine Platform
+    - Windows Hypervisor Platform
+- Step 4: Close the window and restart your computer.
+
+![virtualization-features](windows_features.png)
+
+Make sure you have updated your windows.
+
+- Step 1: `Windows + R`
+- Step 2: Enter: `ms-settings:windowsupdate`
+- Step 3: Peform the necessary updates.
+
+![windows-update](windows_update.png)
+
 ## WSL Installation
 
 In windows we can execute a command as administrator by using `CTRL + SHIFT + ENTER`
@@ -40,16 +79,81 @@ combination. We will execute the
 
 Follow the instructions below:
 - Step 1: Press `Windows + R`
-- Step 2: Open powershell, by typing `ps` and click `CTRL + SHIFT + ENTER` to run as administrator.
+- Step 2: Open powershell, by typing `powershell` and click `CTRL + SHIFT + ENTER` to run as administrator.
+- Step 3: Click `YES` to the question: `Do you want to allow this app to make changes to this device?`
 
 The powershell command line will pop up (probably a blue window).
+
+<details>
+    <summary> Click me: Windows 10 </summary>
+
+Please leave the previous powershell window open. We will need it!
+
+These steps are specific for Windows 10. We will follow the tutorials here: 
+
+[windows-10-WSL](https://contabo.com/blog/how-to-install-wsl2-on-windows-10/) and the official Microsoft tutorial [microsoft-WSL-old](https://learn.microsoft.com/en-us/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package).
+
+- Step 1: Enable WSL on your machine.
+
+```
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+```
+
+If everything worked properly, you should see that `The operation completed successfully`.
+
+- Step 2: Enabling Virtual Machine feature
+
+```
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+```
+
+Again, if everything worked properly, you should see that `The operation completed successfully`.
+
+- Step 3: Download the Linux Kernel Update Package.
+
+The download link: [linux-kernel](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)
+
+- Step 4: Set WSL 2 as your default version
+
+Open PowerShell as described above and run this command:
+
+```
+wsl --set-default-version 2
+```
+
+- Step 5: Install Ubuntu via Microsoft Store
+
+Open Microsoft store from your `Search` bar, search for `Ubuntu` and click on `Get`. Wait until installation has been completed.
+
+It should look like this:
+
+![ubuntu](ubuntu-store.png)
+
+The first time the Linux distribution is launched a new console window will pop-up and you will be asked to wait.
+
+Then you need to create an account after the process is finished.
+
+</details>
+
+<details>
+
+<summary> Click Here: Windows 11 </summary>
+
+Now let's list the available distributions (optional):
+
+```
+wsl --list --online
+```
+
 We will install Ubuntu distribution as follows:
 
 - Step 1: Enter `wsl --install`
-- Step 2: Restart your computer.
+- Step 2: Close the windows and restart your computer.
 
 After restart is complete, we need to perform some sanity checks, to ensure the 
 installation has been succesful.
+
+</details>
 
 Check the version of our WSL:
 
@@ -57,11 +161,38 @@ Check the version of our WSL:
 wsl -l -v
 ```
 
+You should see something like:
+
+![running-instance](wsl_running_distance_marked.PNG)
+
 If the version is not WSL 2, we need to set it as follows:
 
 ```
 wsl --set-version Ubuntu 2
 ```
+
+You can open a folder from Ubuntu with Windows Explorer by typing the following command:
+
+```
+explorer.exe .
+```
+
+The folder will be open using the Windows Explorer.
+
+You can access any directory on your Windows, by accessing the mounted part:
+
+```
+cd /mnt/c/Users/<your-username>
+```
+
+
+## Ubuntu Profile
+
+After we have succesfully installed WSL and Windows Terminal, the first time we open WSL, we will have to create a useraccount.
+
+- Step 1: Choose your username.
+- Step 2: Choose your password and confirm it.
+
 
 ## Windows Terminal
 
@@ -72,13 +203,6 @@ Let's set your windows terminal as the default:
 - Step 3: Press `CTRL + ,`
 - Step 4: Change the default profile to Ubuntu
 - Step 5: SAVE!
-
-
-## Ubuntu Profile
-
-After we have succesfully installed WSL and Windows Terminal, the first time we open WSL, we will have to create a useraccount.
-
-
 
 
 ## Locale
@@ -232,6 +356,15 @@ python --version
 
 If you see Python written on your terminal, it means the installation 
 was succesful!
+
+Micromamba commands
+
+- Remove environment: `micromamba env remove -n <env_name>`
+- List environments: `micromamba env list`
+- Deactivate: `micromamba deactivate`
+- Create environment: `micromamba create -n <env_name>`
+- Create environment with dependencies: `micromamba create -n <env_name> -f environment.yaml`
+- Info: `micromamba info`
 
 
 ## GitHub Profile
