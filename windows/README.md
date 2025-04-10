@@ -199,7 +199,7 @@ After we have succesfully installed WSL and Windows Terminal, the first time we 
 
 - Step 1: Choose your username.
 - Step 2: Choose your password and confirm it.
-
+- Step 3: DO NOT FORGET YOUR PASSWORD!
 
 ## Windows Terminal
 
