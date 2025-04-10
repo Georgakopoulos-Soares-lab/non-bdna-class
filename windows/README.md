@@ -1,6 +1,6 @@
 # NON-B DNA Bioinformatics Class: Windows Guide
 
-This is the bioinformatics installation guide for Windows.
+This is the bioinformatics 🧬 installation guide for Windows.
 
 Instructors: `Ilias Georgakopoulos-Soares izg5139@psu.edu`
 
@@ -75,9 +75,10 @@ Make sure you have updated your windows.
 ## WSL Installation
 
 In windows we can execute a command as administrator by using `CTRL + SHIFT + ENTER`
-combination. We will execute the 
+combination 💻.
 
 Follow the instructions below:
+
 - Step 1: Press `Windows + R`
 - Step 2: Open powershell, by typing `powershell` and click `CTRL + SHIFT + ENTER` to run as administrator.
 - Step 3: Click `YES` to the question: `Do you want to allow this app to make changes to this device?`
@@ -85,13 +86,15 @@ Follow the instructions below:
 The powershell command line will pop up (probably a blue window).
 
 <details>
-    <summary> Click me: Windows 10 </summary>
+    <summary> Windows 10: Click Me! </summary>
 
 Please leave the previous powershell window open. We will need it!
 
 These steps are specific for Windows 10. We will follow the tutorials here: 
 
 [windows-10-WSL](https://contabo.com/blog/how-to-install-wsl2-on-windows-10/) and the official Microsoft tutorial [microsoft-WSL-old](https://learn.microsoft.com/en-us/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package).
+
+Enter the following commands in your open PowerShell command line. Remember, that privileges are elevated (administrator). 
 
 - Step 1: Enable WSL on your machine.
 
@@ -137,7 +140,7 @@ Then you need to create an account after the process is finished.
 
 <details>
 
-<summary> Click Here: Windows 11 </summary>
+<summary> Windows 11: Click Me! </summary>
 
 Now let's list the available distributions (optional):
 
@@ -152,6 +155,8 @@ We will install Ubuntu distribution as follows:
 
 After restart is complete, we need to perform some sanity checks, to ensure the 
 installation has been succesful.
+
+Oof! You made it! 
 
 </details>
 
@@ -369,7 +374,7 @@ python --version
 If you see Python written on your terminal, it means the installation 
 was succesful!
 
-Micromamba commands
+Micromamba useful commands
 
 - Remove environment: `micromamba env remove -n <env_name>`
 - List environments: `micromamba env list`
