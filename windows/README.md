@@ -33,7 +33,7 @@ To identify System Architecture proceed as follows:
 
 It should look as follows:
 
-![System Information](system_information.png)
+![System Information](images/system_information.png)
 
 We can see that our system is 64-bit with x64-based Intel processor.
 
@@ -62,7 +62,7 @@ As a next step, we will make sure virtualization features are enabled.
     - Windows Hypervisor Platform
 - Step 4: Close the window and restart your computer.
 
-![virtualization-features](windows.png)
+![virtualization-features](images/windows.png)
 
 Make sure you have updated your windows.
 
@@ -70,7 +70,7 @@ Make sure you have updated your windows.
 - Step 2: Enter: `ms-settings:windowsupdate`
 - Step 3: Peform the necessary updates.
 
-![windows-update](windows_update.png)
+![windows-update](images/windows_update.png)
 
 ## WSL Installation
 
@@ -130,7 +130,7 @@ Open Microsoft store from your `Search` bar, search for `Ubuntu` and click on `G
 
 It should look like this:
 
-![microsoft-store](ubuntu.png)
+![microsoft-store](images/ubuntu.png)
 
 The first time the Linux distribution is launched a new console window will pop-up and you will be asked to wait.
 
@@ -170,7 +170,7 @@ wsl -l -v
 
 You should see something like:
 
-![running-instance](wsl_running_instance_marked.PNG)
+![running-instance](images/wsl_running_instance_marked.PNG)
 
 If the version is not WSL 2, we need to set it as follows:
 
