@@ -25,7 +25,7 @@ Depending on your OS, click one of the following guides:
 
 <p align="center">
   <a href="windows/README.md">
-    <img src="windows/image.svg" alt="Windows Installation" width="45%">
+    <img src="windows/windows.svg" alt="Windows Installation" width="45%">
   </a>
   <a href="mac/README.md">
     <img src="mac/image.png" alt="Mac Installation" width="45%">
