@@ -6,7 +6,10 @@ In case of technical difficulties you may encounter: DO NOT DESPAIR!
 
 We can always use an online notebook to run and compile the code.
 
-Instructors: `Ilias Georgakopoulos-Soares izg5139@psu.edu`
+Instructors: 
+
+- `Ilias Georgakopoulos-Soares izg5139@psu.edu`
+- `Nikol Chantzi nmc6088@psu.edu`
 
 Please for any question contact Nikol in the following email: `nmc6088@psu.edu`.
 
