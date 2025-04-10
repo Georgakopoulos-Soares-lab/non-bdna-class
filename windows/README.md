@@ -62,7 +62,7 @@ As a next step, we will make sure virtualization features are enabled.
     - Windows Hypervisor Platform
 - Step 4: Close the window and restart your computer.
 
-![virtualization-features](windows_feature.png)
+![virtualization-features](windows.png)
 
 Make sure you have updated your windows.
 
