@@ -170,7 +170,7 @@ wsl -l -v
 
 You should see something like:
 
-![running-instance](images/wsl_running_instance_marked.PNG)
+![running-instance](images/wsl_running_instance_marked.png)
 
 If the version is not WSL 2, we need to set it as follows:
 
