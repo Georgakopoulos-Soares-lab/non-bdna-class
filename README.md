@@ -10,6 +10,15 @@ Instructors: `Ilias Georgakopoulos-Soares izg5139@psu.edu`
 
 Please for any question contact Nikol in the following email: `nmc6088@psu.edu`.
 
+## GitHub Profile
+
+You need to create a github profile in the following website:
+
+[GitHub](https://github.com/)
+
+After your github profile has been created, we need to create an SSH key to 
+be able to access it from the command line.
+
 ## Installation Guide
 
 Depending on your OS, click one of the following guides:

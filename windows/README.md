@@ -225,6 +225,16 @@ and
 sudo locale-gen en_US.UTF-8
 ```
 
+## GitHub Profile
+
+You need to create a github profile in the following website:
+
+[GitHub](https://github.com/)
+
+
+After your github profile has been created, we need to create an SSH key to 
+be able to access it from the command line
+
 ## CLI tools
 
 We need to install some basic utilities to facilitate our workflow.
@@ -367,14 +377,3 @@ Micromamba commands
 - Create environment: `micromamba create -n <env_name>`
 - Create environment with dependencies: `micromamba create -n <env_name> -f environment.yaml`
 - Info: `micromamba info`
-
-
-## GitHub Profile
-
-You need to create a github profile in the following website:
-
-[GitHub](https://github.com/)
-
-
-After your github profile has been created, we need to create an SSH key to 
-be able to access it from the command line
